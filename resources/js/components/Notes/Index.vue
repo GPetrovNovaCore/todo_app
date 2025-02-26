@@ -1,7 +1,7 @@
 <template>
-    <div v-for="note in notes">
-        <p>{{ note.id }}. {{ note.title }}: {{ note.content }}</p>
-        <hr>
+    <div v-for="note in notes" class="main-note">
+        <p>{{ note.id }}. {{ note.title }}</p>
+        <p class="main-note-arrow">➾</p>
     </div>
 </template>
 

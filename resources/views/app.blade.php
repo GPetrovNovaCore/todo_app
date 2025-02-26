@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="/public/storage/fonts/">
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -25,32 +25,63 @@
     </head>
     <body>
         <div class="container" id="app">
-            <aside>
+            <aside class="col-3">
                 <div>
                     <div class="d-flex aside-header">
                         <h2>Menu</h2>
-                        <a href="#">More</a>
+                        <span class="fa fa-menu-bars-icon"></span>
                     </div>
 
-                    <input class="aside-search"></input>
+                    <div class="d-flex search-box">
+                        <input type="text"></input>
+                        <span><i class="fa fa-search-icon"></i></span>
+                    </div>
                 </div>
 
                 <div class="aside-notes">
                     <h3>Notes</h3>
                     <ul>
-                        <li><a href="#">Upcoming</a></li>
-                        <li><a href="#">Today</a></li>
-                        <li><a href="#">Completed</a></li>
-                        <li><a href="#">Calendar</a></li>
+                        <li><span href="#">Upcoming</span></li>
+                        <li><span href="#">Today</span></li>
+                        <li><span href="#">Completed</span></li>
+                        <li><span href="#">Calendar</span></li>
+                    </ul>
+                </div>
+
+                <div class="aside-lists">
+                    <h3>Lists</h3>
+                    <ul>
+                        <li><span href="#">List 1</span></li>
+                        <li><span href="#">List 2</span></li>
+                        <li><span href="#">List 3</span></li>
+                        <li><span href="#">List 4</span></li>
+                    </ul>
+                </div>
+
+                <div class="aside-tags">
+                    <h3>Tags</h3>
+                    <span href="#">tag1 </span>
+                    <span href="#">tag2 </span>
+                    <span href="#">tag3 </span>
+                    <span href="#">tag4 </span>
+                </div>
+
+                <div class="footer">
+                    <ul>
+                        <li>Settings</li>
+                        <li>Logout</li>
                     </ul>
                 </div>
             </aside>
 
-            <main>
+            <main class="col-4">
                 <h1>Notes</h1>
                 <notes-index></notes-index>
             </main>
+
+            <aside class="col-5">
+                asd
+            </aside>
         </div>
-        @yield('content')
     </body>
 </html>
